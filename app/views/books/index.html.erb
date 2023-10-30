@@ -20,6 +20,7 @@
               <th>Opinion</th>
               <th>Favorite</th>
               <th>Comment</th>
+              <th>View</th>
             </tr>
             
             <% @books.each do |book| %>
@@ -55,6 +56,7 @@
                 <%= link_to "#{book.book_comments.count}", book_path(book.id) %>
               </td>
               
+              <td><%= book.read_counts.count %></td>
             </tr>
             <% end %>
           </table>
