@@ -21,5 +21,7 @@ Rails.application.routes.draw do
       get :follows, :followers
     end
       resource :relationships, only: [:create, :destroy]
-    end  
+    end
+    
+  get '/favicon.ico', to: redirect('/assets/favicon.ico')
 end
